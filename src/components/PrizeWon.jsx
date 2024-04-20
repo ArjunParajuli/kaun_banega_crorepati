@@ -2,10 +2,11 @@ import React from "react";
 import { prizeMoney } from "../data";
 
 const PrizeWon = ({ quesNum }) => {
+  const prizeMoneyRev = [...prizeMoney].reverse();
   return (
     <div className="w-3/12">
       <ul className="w-full mt-12">
-        {prizeMoney.map((currPrize) => {
+        {prizeMoneyRev.map((currPrize) => {
           return (
             <li
               key={currPrize.id}
@@ -17,7 +18,7 @@ const PrizeWon = ({ quesNum }) => {
                 {currPrize.id}.
               </span>
               <span className="text-center text-md flex-1">
-                {currPrize.amount}
+              ₹ {currPrize.amount}
               </span>
             </li>
           );
