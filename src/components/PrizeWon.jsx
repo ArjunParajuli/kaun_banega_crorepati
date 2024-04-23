@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { prizeMoney } from "../data";
+import { QuestionContext } from "./QuestionContext";
 
-const PrizeWon = ({ quesNum }) => {
+const PrizeWon = () => {
+  const { quesNum } = useContext(QuestionContext);
   const prizeMoneyRev = [...prizeMoney].reverse();
   return (
     <div className="w-3/12">
