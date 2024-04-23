@@ -1,25 +1,25 @@
 import { useEffect } from 'react';
 
-const Timer = ({timer, setTimer, handleSelect, selAns}) => {
+const Timer = ({timer, setTimer, handleSelect, selAns, isAnswerSelected}) => {
 
-  // useEffect(()=>{
+  useEffect(()=>{
     
-  //     const timerId = setTimeout(()=>{
-  //       if(timer !== 0){
-  //         setTimer((prev) => (prev-1))
-  //       }
+      const timerId = setTimeout(()=>{
+        if(timer !== 0 && !isAnswerSelected){
+          setTimer((prev) => (prev-1))
+        }
   
-  //       if(timer === 0 && selAns === null){
-  //         handleSelect(null);
-  //       }
+        if(timer === 0 && selAns === null){
+          handleSelect(null);
+        }
         
-  //     }, 1000)
+      }, 1000)
 
-  //   return () =>{
-  //     clearTimeout(timerId);  // Cleanup the timeout when component unmounts or when time changes
-  //   }
+    return () =>{
+      clearTimeout(timerId);  // Cleanup the timeout when component unmounts or when time changes
+    }
 
-  // }, [timer]) // Run useEffect whenever time changes
+  }, [timer]) // Run useEffect whenever time changes
 
   return (
     <div className="flex justify-center items-start">

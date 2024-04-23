@@ -52,7 +52,7 @@ html {
  .result-modal {
     border: none;
     border-radius: 8px;
-    padding: 2rem;
+    padding: 3rem;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -61,7 +61,31 @@ html {
   
   .result-modal::backdrop {
     background: rgba(0, 0, 0, 0.9);
+    /* background-color: rgba(89, 8, 113, 0.9); */
+  }
+
+
+  /* audience poll */
+  .correct-option-class{
+    height: 165px;
+  }
+
+  .wrong-option-class{
+    height: 45px;
   }
   
-  
+  .audience-modal{
+    border: none;
+    border-radius: 8px;
+    padding: 5rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, #20003C, #5A0976, #240042);
+  }
+
+  .audience-modal::backdrop {
+    background: rgba(0, 0, 0, 0.9);
+  }
 
